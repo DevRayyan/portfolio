@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- bootstrap ui kit link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- preivew not available popup -->
+        <div class="preview w-100 vh-100 position-fixed" style="z-index: 99999 !important;">
+            <div class="popup bg-light col-4 rounded">
+               <i style="cursor: pointer;" class="preview_cross float-end fa-light text-primary fa-xmark fs-5  p-2 me-1"></i>
+               <div class=" my-5 text-center">
+                <p class="mb-0 pb-0  text-dark">Project preview could not available</p>
+                <p class="  text-dark">My work on this project is not complete. </p>
+               </div>
+                <div class="position-absolute bottom-0 start-0 w-100 text-end border-top">
+                    <button class="btn shadow-0 text-primary py-3  preview_cross">Go Back</button>
+                </div>
+            </div>
+        </div>
+    <nav  style="z-index: 99999;"
+        class="d-flex top-nav  align-items-center justify-content-between m-0 p-4 position-absolute  top-0 start-0 end-0">
+        <div class=""><img width="45px" src="./assets/Images/logo.png" alt=""></div>
+        <div class="d-none d-sm-block"> <a class="nav-link  fw-bold text-uppercase fs-7 "
+                style="letter-spacing: 1px;color: #ffffff25 !important;" aria-current="page">Web Developer and
+                Designer,s Portfolio</a></div>
+        <div class="d-none d-sm-block">
+            <a href="#contact" class="text-muted fw-bold  text-uppercase fs-8 ">message me</a>
+        </div>
+        <div class="d-block d-sm-none " id="navigation"><i id="cross" class="fa-solid fa-bars fs-4 text-muted"></i>
+        </div>
+
+    </nav>
+    <div id="navbar" class="end-0 right_div position-fixed" style="z-index: 9999;">
+
+        <ul
+            class="text-light p-0 m-0 list-unstyled d-flex align-items-center flex-column justify-content-center vh-100">
+            <li style="transform:rotate(90deg);margin-bottom:60px;" class=" fs-8 "><a href="#home"
+                    class="text-muted">HOME</a></li>
+            <li style="transform:rotate(90deg);margin-bottom:60px;" class=" fs-8"><a href="#about"
+                    class="text-muted">ABOUT</a></li>
+            <li style="transform:rotate(90deg);margin-bottom:60px;" class=" fs-8 "><a href="#project"
+                    class="text-muted">PROJECTS</a></li>
+            <li style="transform:rotate(90deg);margin-bottom:60px;" class=" fs-8 "><a href="#service"
+                    class="text-muted">SERVICES</a></li>
+            <li style="transform:rotate(90deg);margin-bottom:60px;" class=" fs-8 "><a href="#plan"
+                    class="text-muted">PLANS</a></li>
+            <li style="transform:rotate(90deg);" class=" fs-8"><a href="#contact" class="text-muted">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div id="home" class="m-0 d-flex ">
+        <div class="left_div vh-100 position-relative d-flex align-items-end" style="overflow-x: hidden;">
+
+            <div class="top-50 start-50 position-absolute"
+                style="opacity: 0.02;transform:translate(-50%,-50%);z-index:-1;"><img onselectstart="return false;"
+                    src="./assets/Images/logo.png" alt=""></div>
+            <div class="container-fluid">
+                <div class=" text-light fw-bold fs-2 mb-3 ms-4 ms-sm-0">Weapons of Choice</div>
+                <div class="d-flex  mb-0 pb-5">
+                    <div style="width: 40px;" class="d-none justify-content-center position-relative d-sm-flex">
+                        <div style="width: 2px" class="bg-light "></div>
+                        <div
+                            class="position-absolute d-flex flex-column align-items-center justify-content-around h-100">
+                            <i class="fa-solid fa-circle-small text-light "></i>
+                            <i class="fa-solid fa-circle-small text-light "></i>
+                            <i class="fa-solid fa-circle-small text-light border rounded-circle  py-1 px-2 "></i>
+                        </div>
+                    </div>
+                    <div class="content col-10 col-sm-8 col-md-7 col-lg-5 ms-4">
+                        <p class="fs-8 fw-bold text-green  pb-0 mb-0 ">This is my favourite Skills set. I few work in
+                            web designing and development. My frontend and Backend combination is...</p>
+                        <div class="row m-0  ">
+                            <div class="skill col-4 ps-0 ">
+                                <label class="form-label text-light fs-7  mb-0" for="customRange1">HTML 5 </label>
+                                <div class="range">
+                                    <input type="range" value="90" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                            <div class="skill col-4 ps-0 ">
+                                <label class="form-label text-light fs-7  mb-0" for="customRange1">CSS 3</label>
+                                <div class="range">
+                                    <input type="range" value="90" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                            <div class="skill col-4 ps-0 ">
+                                <label class="form-label text-light fs-7  mb-0" style="white-space: nowrap;"
+                                    for="customRange1">Bootstrap 5</label>
+                                <div class="range">
+                                    <input type="range" value="90" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 ">
+                            <div class="skill col-4 ps-0 ">
+                                <label class="form-label text-light fs-7  mb-0" for="customRange1">Javascript</label>
+                                <div class="range">
+                                    <input type="range" value="60" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                            <div class="skill col-4 ps-0">
+                                <label class="form-label text-light fs-7  mb-0" for="customRange1">Jquery</label>
+                                <div class="range">
+                                    <input type="range" value="65" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                            <div class="skill col-4 ps-0 ">
+                                <label class="form-label text-light fs-7  mb-0" for="customRange1"
+                                    style="white-space: nowrap;">Core Php </label>
+                                <div class="range">
+                                    <input type="range" value="65" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 ">
+                            <div class="skill col-4 ps-0 ">
+                                <label class="form-label text-light fs-7  mb-0" for="customRange1"
+                                    style="white-space: nowrap;">Mysql Database</label>
+                                <div class="range">
+                                    <input type="range" value="60" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                            <div class="skill col-4 ps-0">
+                                <label class="form-label text-light fs-7  mb-0" for="customRange1">Ajax</label>
+                                <div class="range">
+                                    <input type="range" value="55" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                            <div class="skill col-4 ps-0 ">
+                                <label class="form-label text-light fs-7  mb-0" for="customRange1"
+                                    style="white-space: nowrap;">Canva Pro</label>
+                                <div class="range">
+                                    <input type="range" value="95" step="100" class="slider form-range active"
+                                        id="customRange1" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-light mx-auto indicator mb-5">
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="about" class="about my-5 py-5">
+        <div class="row m-0 pb-5 px-2 px-sm-5 ">
+            <div class="col-12 col-md-6  my-auto">
+                <div class="profile_img rounded-circle mx-auto  mb-4 mb-sm-0" style="max-width:300px;max-height:300px;">
+                    <img class="rounded-circle img-fluid" src="./assets/Images/profile.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 my-auto">
+                <div class="display-1 p-0 m-0 text-light" style="font-family: 'Great Vibes', cursive;
+                ">About Me</div>
+                <!-- <p class="fs-2 p-0 m-0 text-light" style="font-family: 'Great Vibes', cursive;
+">Rayyan ali</p> -->
+                <p class=" fs-5 m-0 p-0 fw-light" style="color:#00FFB9;">Passionate Web Developer</p>
+                <p class="text-muted ">Greeting, my name is Rayyan Ali based in Pakistan. I passed the first-year
+                    intermediate exam and am in the second year in the field of Pre-engineering. I have no experience in
+                    web development, but I am passionate about designing and developing websites. I enrolled in Aptech a
+                    year ago, and now my current status is PHP developer.</p>
+                <a href="./resume.pdf" class="gradient btn text-light rounded-pill  text-capitalize fw-normal fs-6 p-3 px-5"
+                    style="border:3px solid #2A2C39;">Get Resume <i
+                        class=" fa-solid fa-down-to-bracket ms-1"></i></a>
+            </div>
+        </div>
+        <div id="project" class="row  m-0 ">
+            <div class="col-12 col-md-6 px-2 px-sm-5  d-flex d-md-block flex-column">
+                <div class="display-3 px-4 display-md-1 text-light mb-5" style="font-family:'Great Vibes', cursive;">My
+                    Special Skill Field Here.</div>
+                <div class="d-block px-4 d-sm-flex  d-md-block">
+                    <div>
+                        <p class="fs-4 mb-0  " style="color:#00FFB9 ;">|| Static Projects</p>
+                        <ul class="list-unstyled">
+                            <li><a class="text-light fw-light" href="https://portfoliorayyan.netlify.app/"
+                                    target="_blank"><i style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>Previous Portfolio</a></li>
+                            <li><a class="text-light fw-light" target="_blank"
+                                    href="https://devrayyan.github.io/Music-Player/"><i style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>Music Player</a></li>
+                            <li><a class="text-light fw-light" href="https://zap-mart.netlify.app/index.html"
+                                    target="_blank"><i style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>Zap Mart</a></li>
+                            <li class="preview_link"style="cursor: pointer;"><a class="text-light fw-light"><i style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>HandiKrafts</a></li>
+                            <li><a class="text-light fw-light" href="https://restaurant-res.netlify.app/"
+                                    target="_blank"><i style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>Res-Restaurant </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ms-0 ms-sm-5 ms-md-auto">
+                        <p class="fs-4 mb-0" style="color:#00FFB9 ;">|| Dynamic Projects</p>
+                        <ul class="list-unstyled ">
+                            <li class="  preview_link " style="cursor: pointer;"><a class="text-light fw-light "><i
+                                        style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>E-Book</a></li>
+                            <li class="  preview_link " style="cursor: pointer;"><a class="text-light fw-light "><i
+                                        style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>Online Notes Provider</a></li>
+                            <li class="  preview_link " style="cursor: pointer;"><a class="text-light fw-light "><i
+                                        style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>Personal Blog</a></li>
+                            <li><a target="_blank" class="text-light fw-light"
+                                    href="http://webapplicationthrift.000webhostapp.com/"><i style="color:#00FFB9 ;"
+                                        class="fa-light me-2 fs-8 fa-circle-small"></i>Thrift Fashion</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="px-4">
+                    <p class="fs-4 mb-0  " style="color:#00FFB9 ;">|| Fiverr Gigs</p>
+                    <div class="container-fluid d-flex mb-4 mb-md-0">
+                        <div class="social-card">
+                            <a href="https://www.fiverr.com/share/DVAxDD" target="_blank" class="overlay">Resume
+                                Writing</a>
+                        </div>
+                        <div class="social-card">
+                            <a href="https://www.fiverr.com/share/64GoYL" target="_blank" class="overlay">Portfolio
+                                Website</a>
+
+                        </div>
+                        <div class="social-card">
+                            <a href="https://www.fiverr.com/share/Y6AlRq" target="_blank" class="overlay">PSD to
+                                HTML</a>
+
+                        </div>
+                        <div class="social-card">
+                            <a href="https://www.fiverr.com/share/oYr4d8" target="_blank" class="overlay">FrontEnd
+                                Developer</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 px-2 px-sm-5 ">
+                <div class="container-fluid ps-sm-0">
+                    <div class="skill-progress-single-item p-5 mb-3 " style="background:#22242c;">
+                        <div class="tag text-muted">Teamwork</div>
+                        <p class="fs-7">4 Members</p>
+                        <div class="skill-box">
+                            <div class="progress-line" data-width="90" style="width: 90%;">
+                                <span class="skill-percentage text-dark rounded-circle">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress-single-item p-5 mb-3" style="background:#22242c;">
+                        <div class="tag text-muted">Communication</div>
+                        <p class="fs-7">Urdu | English</p>
+
+                        <div class="skill-box">
+                            <div class="progress-line" data-width="90" style="width: 70%;">
+                                <div class="skill-percentage text-dark rounded-circle ">70%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress-single-item p-5 mb-3" style="background:#22242c;">
+                        <div class="tag text-muted">FrontEnd Combination</div>
+                        <p class="fs-7">HTML | CSS | Javascript | Bootstrap | Jquery</p>
+                        <div class="skill-box">
+                            <div class="progress-line" data-width="90" style="width:75%;">
+                                <div class="skill-percentage text-dark rounded-circle ">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress-single-item p-5 mb-3" style="background:#22242c;">
+                        <div class="tag text-muted">BackEnd Combination</div>
+                        <p class="fs-7">PHP | MYSQL Database | Ajax</p>
+
+                        <div class="skill-box">
+                            <div class="progress-line" data-width="90" style="width: 70%;">
+                                <div class="skill-percentage text-dark rounded-circle ">70%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="service" class="px-2 px-sm-5 my-4 pb-4  ">
+        <div class="display-3 px-4 display-md-1 text-light mb-3" style="font-family:'Great Vibes', cursive;">I provide
+            my best Services</div>
+        <div class="row px-3 m-0  ">
+            <div class="col-12 col-sm-6 col-lg-3 service  mt-lg-auto mt-4">
+                <div class="card ">
+                    <img class="rounded" style="object-fit:cover;opacity: .5;" height="350px"
+                        src="./assets/Images/reponsive.png" alt="">
+                    <div
+                        class="h-100 p-2 rounded position-absolute service-content d-flex justify-content-center align-items-center flex-column ">
+
+                        <div class=" fw-bold fs-3 text-center" style="color:#00FFB9;line-height: 35px;">Responsive Web
+                            Design</div>
+                        <p class="text-center fs-7 text-dark m-0 p-0 " style="line-height: 25px;">Access to content that
+                            is appropriately adapted on any device greatly improves the user experience. A good
+                            responsive design also improves readability, increases the time spent on a website, it
+                            enhances interaction or, in the case of e-commerce, improves sales</p>
+                    </div>
+                    <a class="card-overlay"><i class="fa-solid fa-lock lock"></i></a>
+                </div>
+                <div class="head d-none d-lg-block"></div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 service  mt-lg-auto mt-4">
+                <div class="head d-none d-lg-block"></div>
+                <div class="card ">
+                    <img class="rounded" style="object-fit:cover;opacity: .5;" height="350px"
+                        src="./assets/Images/db.png" alt="">
+                    <div
+                        class="h-100 p-2 rounded position-absolute service-content d-flex justify-content-center align-items-center flex-column ">
+
+                        <div class=" fw-bold fs-3 text-center" style="color:#00FFB9;line-height: 35px;">Dashboard Design
+                        </div>
+                        <p class="text-center fs-7 text-dark m-0 p-0 " style="line-height: 25px;">A dashboard design
+                            software helps you to spot trends and presents analysis results with beautiful charts to
+                            turn data into actionable insights..</p>
+                    </div>
+                    <a class="card-overlay rounded"><i class="fa-solid fa-lock lock"></i></a>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 service mt-lg-auto mt-4">
+                <div class="card ">
+                    <img class="rounded" style="object-fit:cover;opacity: .5;" height="350px"
+                        src="./assets/Images/paris.jpg" alt="">
+
+                    <div
+                        class="h-100 p-2 rounded position-absolute service-content d-flex justify-content-center align-items-center flex-column ">
+
+                        <div class=" fw-bold fs-3 text-center" style="color:#00FFB9;line-height: 35px;">Dynamic Website
+                        </div>
+                        <p class="text-center fs-7 text-dark m-0 p-0 " style="line-height: 25px;">A dynamic website is a
+                            website that displays different types of content every time a user views it. This display
+                            changes depending on a number of factors like viewer demographics, time of day, location,
+                            language settings, and so on.</p>
+                    </div>
+                    <a class="card-overlay"><i class="fa-solid fa-lock lock"></i></a>
+                </div>
+                <div class="head d-none d-lg-block"></div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 service mt-lg-auto mt-4">
+                <div class="head d-none d-lg-block"></div>
+                <div class="card ">
+                    <img class="rounded" style="object-fit:cover;opacity: .5;" height="350px"
+                        src="./assets/Images/gig1.jpg" alt="">
+                    <div
+                        class="h-100 p-2 rounded position-absolute service-content d-flex justify-content-center align-items-center flex-column ">
+
+                        <div class="fw-bold fs-3 text-center" style="color:#00FFB9;line-height: 35px;">Personal
+                            Portfolio Website</div>
+                        <p class="text-center fs-7 text-muted m-0 p-0 " style="line-height: 25px;">A portfolio is a
+                            living and changing collection of records that reflect your accomplishments, skills,
+                            experiences, and attributes. It highlights and showcases samples of some of your best work,
+                            along with life experiences, values and achievements.</p>
+                    </div>
+                    <a class="card-overlay"><i class="fa-solid fa-lock lock"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="plan">
+        <div class="row m-0 justify-content-center fs-1 text-light mb-3 mt-5"
+            style="font-family:'Great Vibes', cursive;;">
+            Plans And Pricing
+        </div>
+        <div class="plans d-flex mb-3 justify-content-center pb-5">
+            <div data-id="0" class="plan me-3 me-sm-5"><i class="fa-solid fa-star"></i></div>
+            <div data-id="1" class="plan me-3 me-sm-5"><i class="fa-solid fa-bolt"></i></div>
+            <div data-id="2" class="plan active_plan me-3 me-sm-5"><i class="fa-solid fa-paper-plane"></i></div>
+            <div data-id="3" class="plan "><i class="fa-solid fa-rocket-launch"></i></div>
+
+
+        </div>
+        <div class="price">
+            <div id="0" class="pricing  ">
+                <div class="d-flex mt-3 justify-content-between align-items-end px-4">
+                    <div class=""><i class="fa-solid fa-star fa-2x  text-danger"></i>
+                        <div class="lh-sm">
+                            <p class="m-0 p-0 fs-4 text-light">Lite</p>
+                            <p class="m-0 p-0 fs-7"><span class="text-danger ">Static Website</span></p>
+                        </div>
+                    </div>
+                    <div class=" fs-4 text-light">$50</div>
+                </div>
+                <div class="ms-4 mt-3">
+                    <ul class="lh-lg list-unstyled">
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span class="ms-1 fs-8 text-muted">PSD
+                                to HTML Conversion</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Jpg/Png to HTML Conversion</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span class="ms-1 fs-8 text-muted">PDF
+                                to HTML Conversion</span></li>
+                        <li><i class="fa-solid fa-check-circle text-muted"></i> <span
+                                class="ms-1 fs-8 text-muted">Premium Assets Used</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Responsive Web Layout</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Mobile Friendly Design</span></li>
+                        <li><i class="fa-solid fa-check-circle text-muted"></i> <span
+                                class="ms-1 fs-8 text-muted">Ecommerce Website</span></li>
+                        <li><i class="fa-solid fa-check-circle text-muted"></i> <span
+                                class="ms-1 fs-8 text-muted">Correct Grammar Mistakes</span></li>
+                        <li><i class="fa-solid fa-check-circle text-muted"></i> <span class="ms-1 fs-8 text-muted">One
+                                month Chat Support</span></li>
+                        <li><i class="fa-solid fa-check-circle text-muted"></i> <span class="ms-1 fs-8 text-muted">Admin
+                                Dashboard</span></li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div id="1" class="pricing ">
+                <div class="d-flex mt-3 justify-content-between align-items-end px-4">
+                    <div class=""><i class="fa-solid fa-bolt fa-2x  text-warning"></i>
+                        <div class="lh-sm">
+                            <p class="m-0 p-0 fs-4 text-light">Bussiness</p>
+                            <p class="m-0 p-0 fs-7"><span class="text-warning fw-light">Static Website</span></p>
+                        </div>
+                    </div>
+                    <div class=" fs-4 text-light">$100</div>
+                </div>
+                <div class="ms-4 mt-3">
+                    <ul class="lh-lg list-unstyled">
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span class="ms-1 fs-8 text-muted">1
+                                Page 5+ Sections</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Premium Assets Used</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Responsive Web Layout</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Mobile Friendly Design</span></li>
+                        <li><i class="fa-solid fa-check-circle text-muted"></i> <span
+                                class="ms-1 fs-8 text-muted">Ecommerce Website</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Correct Grammar Mistakes</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span class="ms-1 fs-8 text-muted">One
+                                month Chat Support</span></li>
+                        <li><i class="fa-solid fa-check-circle text-muted"></i> <span class="ms-1 fs-8 text-muted">Admin
+                                Dashboard</span></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="2" class="pricing active">
+                <div class="d-flex mt-3 justify-content-between align-items-end px-4">
+                    <div class=""><i class="fa-solid fa-paper-plane fa-2x  text-primary"></i>
+                        <div class="lh-sm">
+                            <p class="m-0 p-0 fs-4 text-light">Pro</p>
+                            <p class="m-0 p-0 fs-7"><span class="text-primary ">Web Applcation</span></p>
+                        </div>
+                    </div>
+                    <div class=" fs-4 text-light">$200</div>
+                </div>
+                <div class="ms-4 mt-3">
+                    <ul class="lh-lg list-unstyled">
+
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">File Format Convertor, etc</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Premium Assets Used</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Responsive Web Layout</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Mobile Friendly Design</span></li>
+                        <li><i class="fa-solid fa-check-circle text-muted"></i> <span
+                                class="ms-1 fs-8 text-muted">Ecommerce Website</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Correct Grammar Mistakes</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span class="ms-1 fs-8 text-muted">One
+                                month Chat Support</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Admin Dashboard</span></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="3" class="pricing ">
+                <div class="d-flex mt-3 justify-content-between align-items-end px-4">
+                    <div class=""><i class="fa-solid fa-rocket-launch  fa-2x  text-secondary"></i>
+                        <div class="lh-sm">
+                            <p class="m-0 p-0 fs-4 text-light">Ultimate</p>
+                            <p class="m-0 p-0 fs-7"><span class="text-secondary ">Dynamic Website</span></p>
+                        </div>
+                    </div>
+                    <div class=" fs-4 text-light">$500+</div>
+                </div>
+                <div class="ms-4 mt-3">
+                    <ul class="lh-lg list-unstyled">
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Premium Assets Used</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Responsive Web Layout</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Mobile Friendly Design</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Ecommerce Website</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Correct Grammar Mistakes</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span class="ms-1 fs-8 text-muted">One
+                                month Chat Support</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span
+                                class="ms-1 fs-8 text-muted">Admin Dashboard</span></li>
+                        <li><i class="fa-solid fa-check-circle text-success"></i> <span class="ms-1 fs-8 text-muted">Six
+                                month Chat Support</span></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="contact" class="row m-0">
+        <div class="col-12 mx-auto col-sm-8 col-md-6 p-3 p-sm-5 border-end border-bottom border-dark shadow-lg">
+            <div>
+                <span class=" text-light ms-3 ">Hi,You have a question</span>
+                <div style="color:#00FFB9;font-family:'Great Vibes', cursive;font-size:6rem;"
+                    class="lh-sm contact-heading">Contact Us</div>
+                <p class="text-light fw-light fs-7">Feel free to contact us and I will get back to you as soon as
+                    possible</p>
+            </div>
+            
+                <div class="d-flex flex-column col-12 col-lg-8  ms-auto">
+                    <input required type="text" class="name pb-2 mt-4 mb-3 border-0 border-bottom border-muted text-muted contact"
+                    style="background: none;outline:none;" placeholder="name">
+                    <input required type="text" class=" email pb-2 mt-4 mb-3 border-0 border-bottom border-muted text-muted contact"
+                    style="background: none;outline:none;" placeholder="email address" >
+                    <input required type="text" class=" pb-2 mt-4 mb-3 msg border-0 border-bottom border-muted text-muted contact"
+                    style="background: none;outline:none;" placeholder="tell us all about it" >
+                    <button class="btn btn-light text-dark mt-4 btn-lg submit" >Send Message</button>
+                </div>
+            
+            </div>
+        <div class="col-12 position-relative col-sm-8 mx-auto col-md-6 p-5 text-center text-sm-start">
+            <div class="">
+                <ul class="list-unstyled d-flex flex-column flex-sm-row justify-content-between m-0 me-md-5 ">
+                    <li class="d-block d-sm-none text-light fs-6">Social Links</li>
+                    <li class="fs-7"><a target="_blank" href="https://github.com/DevRayyan" class="text-muted">Github</a></li>
+                    <li class="fs-7"><a target="_blank" href="https://www.linkedin.com/in/rayyan-ali-48385b244/" class="text-muted">LinkedIn</a></li>
+                    <li class="fs-7"><a target="_blank" href="https://www.fiverr.com/rayyanalik?public_mode=true" class="text-muted">Fiverr</a></li>
+                    <li class="fs-7"><a target="_blank" href="https://www.facebook.com/profile.php?id=100085572249842" class="text-muted">Facebook</a></li>
+                </ul>
+            </div>
+            <div class="mt-sm-5 pt-sm-5">
+                <ul class="list-unstyled ">
+                    <li class="text-light fs-6">Address</li>
+                    <p style="width:150px;" class="fs-7 text-muted mx-auto mx-sm-0">sector 5/a-4 house no... North
+                        Karachi, Pakistan</p>
+                </ul>
+                <ul class="list-unstyled ">
+                    <li class="text-light fs-6">Support</li>
+                    <li class="text-muted fs-7">alirayyan.dev@gmail.com</li>
+                    <li class="text-muted fs-7">rayyanali4422@gmail.com</li>
+                    <li class="text-muted fs-7">+92 3170666298</li>
+                </ul>
+            </div>
+         
+                <div style="background:#00FFB9;width: 50px;height: 50px;z-index: 999999;" class="m-3 position-absolute bottom-0 end-0 text-dark rounded-circle"><a
+                        href="#home" class="px-4 py-2 text-dark"><i
+                            class="fa-solid fa-arrow-up position-absolute top-50 start-50"
+                            style="transform:translate(-50%,-50%)"></i></a></div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+<script src="./assets/mdbootstrap/js/mdb.min.js"></script>
+<script src="logic.js"></script>
+<script>
+    $(document).ready(()=> {
+
+
+
+        $(".plan").click(function () {
+            id = $(this).data('id');
+            $(".pricing").removeClass("active");
+            $("#" + id).addClass("active");
+            $(".plan").removeClass("active_plan");
+            $(this).addClass("active_plan");
+        })
+
+        $('.preview_cross').click(function () {
+            $('.preview').addClass('hidden');
+        })
+        $('.preview_link').click(function () {
+            $('.preview').removeClass('hidden');
+            $('.preview').addClass('preview_cross');
+        })
+
+
+
+
+    })
+</script>
+
+</html>
